@@ -121,7 +121,7 @@ body.menu-open { overflow: hidden; }
   .classic-hero__media::after { display: none; }
   .classic-hero__grain { display: none; }
   .classic-hero__logo { position: absolute; top: 20px; left: 50%; z-index: 4; margin: 0; transform: translateX(-50%); }
-  .classic-hero__logo img { height: 84px; }
+  .classic-hero__logo img { height: 64px; }
   .classic-hero__inner { position: relative; z-index: 3; display: flex; align-items: flex-end; width: 100%; }
   .classic-hero__text { max-width: 100%; }
   .classic-hero__name { display: none; }
