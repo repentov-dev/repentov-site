@@ -3,6 +3,7 @@
 :root {
   --bg: #ffffff;
   --bg-alt: #f5f5f7;
+  --bone: #fbfbfd;
   --ink: #1d1d1f;
   --muted: #6e6e73;
   --faint: #86868b;
@@ -118,21 +119,26 @@ body.menu-open { overflow: hidden; }
   body.page-home { padding-top: 0; }
   .page-home .nav { position: static; inset: auto; background: var(--bone); -webkit-backdrop-filter: none; backdrop-filter: none; }
   .page-home .nav.is-scrolled { background: var(--bone); box-shadow: none; }
-  .classic-hero { min-height: clamp(470px, 68svh, 660px); display: flex; align-items: flex-end; padding: 0; background: #000; }
+
+  /* phone hero: the photo carries the logo, the fade carries the text */
+  .classic-hero { min-height: max(480px, 78vh); min-height: max(480px, 78svh); display: flex; align-items: flex-end; padding: 0; background: var(--dark); }
+  /* bottom-anchored crop: the frame never bites into the bottom of the photo */
   .classic-hero__media { position: absolute; inset: 0; width: 100%; height: 100%; }
-  .classic-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 30%; }
-  .classic-hero__media::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 42%; pointer-events: none; background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.28) 34%, rgba(0, 0, 0, 0.08) 70%, rgba(0, 0, 0, 0) 100%); }
+  .classic-hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 62% 100%; }
   .classic-hero__media::after { display: none; }
+  /* darkening under the logo, so the script reads over the bright wall */
+  .classic-hero__media::before { content: ""; position: absolute; inset: 0 0 auto; z-index: 2; height: 170px; pointer-events: none; background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.56) 38%, rgba(0, 0, 0, 0.2) 72%, rgba(0, 0, 0, 0) 100%); }
   .classic-hero__grain, .classic-hero__blur { display: none; }
-  .classic-hero__scrim { display: block; position: absolute; left: 0; right: 0; bottom: calc(44px + env(safe-area-inset-bottom)); z-index: 2; height: 58%; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 18%, rgba(0, 0, 0, 0.3) 36%, rgba(0, 0, 0, 0.55) 56%, rgba(0, 0, 0, 0.8) 76%, #000 100%); }
+  /* one continuous fade: photo at the top, absolute black at the section edge */
+  .classic-hero__scrim { display: block; position: absolute; inset: 0; z-index: 2; background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.04) 44%, rgba(0, 0, 0, 0.1) 52%, rgba(0, 0, 0, 0.2) 60%, rgba(0, 0, 0, 0.34) 67%, rgba(0, 0, 0, 0.5) 73%, rgba(0, 0, 0, 0.68) 80%, rgba(0, 0, 0, 0.84) 87%, rgba(0, 0, 0, 0.95) 94%, #000 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) calc(100% - 330px), rgba(0, 0, 0, 0.4) calc(100% - 220px), rgba(0, 0, 0, 0.74) calc(100% - 110px), #000 100%); }
   .classic-hero::before { display: none; }
-  .classic-hero__logo { position: absolute; top: 14px; left: 50%; z-index: 4; margin: 0; transform: translateX(-50%); }
-  .classic-hero__logo img { height: 60px; }
-  .classic-hero__inner { position: relative; z-index: 3; width: 100%; padding-block: 96px calc(44px + env(safe-area-inset-bottom)); }
+  .classic-hero__logo { position: absolute; top: 14px; left: 50%; z-index: 4; margin: 0; transform: translateX(-50%); filter: drop-shadow(0 2px 18px rgba(0, 0, 0, 0.6)); }
+  .classic-hero__logo img { height: 58px; }
+  .classic-hero__inner { position: relative; z-index: 3; width: 100%; padding-block: 96px calc(40px + env(safe-area-inset-bottom)); }
   .classic-hero__text { max-width: 100%; }
   .classic-hero__name { display: none; }
-  .classic-hero h1 { max-width: 100%; font-size: clamp(2rem, 8.6vw, 2.6rem); line-height: 1; text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45); }
-  .classic-hero__actions { gap: 10px; margin-top: 20px; }
+  .classic-hero h1 { max-width: 100%; font-size: clamp(2rem, 8.6vw, 2.6rem); line-height: 1; letter-spacing: -0.045em; text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55); }
+  .classic-hero__actions { gap: 10px; margin-top: 22px; }
   .classic-hero .button { min-height: 46px; padding: 0 20px; font-size: 15px; }
   .classic-hero .button--text { padding: 0 20px; border: 1px solid rgba(255, 255, 255, 0.42); border-radius: 980px; background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: none; backdrop-filter: none; }
   .classic-hero .button--text:hover { background: rgba(255, 255, 255, 0.16); color: #fff; }
