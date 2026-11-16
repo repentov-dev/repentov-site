@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apps for the Mac, Egor Repentov</title>
+  <meta name="description" content="Three macOS apps for audio by Egor Repentov: RME Control for TotalMix, FLOW8 over Bluetooth LE, and Meter for tempo and key on device.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Apps for the Mac, Egor Repentov">
+  <meta property="og:description" content="RME Control, FLOW8 and Meter: three macOS apps for audio.">
+  <meta property="og:url" content="https://repentov-dev.github.io/apps.html">
+  <meta property="og:image" content="https://repentov-dev.github.io/assets/rme-control.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/apps.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      if (localStorage.getItem('repentov-lang') === 'ru') {
+        document.documentElement.lang = 'ru';
+        document.documentElement.dataset.lang = 'ru';
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body class="page-apps">
+  <a class="skip" href="#main" data-ru="Перейти к содержанию">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__brand" href="index.html" data-ru="Егор Репентов">Egor Repentov</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="portfolio.html" data-nav-link="records" data-ru="Портфолио">Portfolio</a>
+        <a href="index.html#studio" data-nav-link="studio" data-ru="Студия">Studio</a>
+        <a href="index.html#services" data-nav-link="services" data-ru="Услуги">Services</a>
+        <a href="apps.html" data-nav-link="apps" aria-current="page" data-ru="Приложения">Apps</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="nav__lang" role="group" aria-label="Language" data-ru-aria-label="Язык">
+          <button type="button" data-set-lang="en" aria-pressed="true" aria-label="English">en</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-set-lang="ru" aria-pressed="false" lang="ru" aria-label="Русский">ru</button>
+        </div>
+        <a class="nav__book" href="https://t.me/repentov" target="_blank" rel="noopener" data-ru="Записаться">Book</a>
+        <button class="nav__menu" type="button" data-menu aria-expanded="false" aria-controls="site-menu" aria-label="Menu" data-ru-aria-label="Меню"><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="menu" id="site-menu" data-menu-panel aria-hidden="true">
+    <nav class="menu__links" aria-label="Menu">
+      <a href="portfolio.html" data-ru="Портфолио">Portfolio</a>
+      <a href="index.html#studio" data-ru="Студия">Studio</a>
+      <a href="index.html#services" data-ru="Услуги">Services</a>
+      <a href="apps.html" data-ru="Приложения">Apps</a>
+      <a href="index.html#contact" data-ru="Контакт">Contact</a>
+    </nav>
+    <a class="menu__book" href="https://t.me/repentov" target="_blank" rel="noopener" data-ru="Записаться">Book a session</a>
+    <p class="menu__meta"><span>Minsk</span><a href="https://t.me/repentov" target="_blank" rel="noopener">Telegram</a></p>
+  </div>
+
+  <main id="main">
+    <section class="apps-hero" id="top">
+      <div class="wrap">
+        <h1 data-ru="Приложения на macOS для музыкантов.">Apps for musicians on macOS.</h1>
+        <p class="apps-hero__hobby" data-ru="Это мое хобби">This is my hobby.</p>
+        <p class="apps-hero__back"><a class="chev" href="index.html"><span data-ru="Назад к музыке">Back to music</span><span class="chev__mark" aria-hidden="true">›</span></a></p>
+      </div>
+    </section>
+
+    <section class="products" id="apps">
+      <div class="wrap">
+        <article class="product" id="rme">
+          <a class="product__frame" href="https://repentov-dev.github.io/rme-control/" target="_blank" rel="noopener" data-reveal>
+            <img src="assets/rme-control.webp" width="1280" height="640" alt="RME Control, TotalMix in the menu bar, with the popover, equalizer and meters" loading="lazy" decoding="async">
+          </a>
+          <div class="product__meta" data-reveal>
+            <h3><a href="https://repentov-dev.github.io/rme-control/" target="_blank" rel="noopener">RME Control</a></h3>
+            <p data-ru="Громкость, эквалайзер, компрессор и метры для любого интерфейса RME, по Global OSC.">Volume, EQ, compressor and meters for any RME interface, over Global OSC.</p>
+            <p class="product__spec">macOS 14<span>Swift 6</span><span>MIT</span></p>
+            <ul class="product__links">
+              <li><a href="https://repentov-dev.github.io/rme-control/" target="_blank" rel="noopener" data-ru="Открыть сайт">Visit site</a></li>
+              <li><a href="https://github.com/repentov-dev/rme-control" target="_blank" rel="noopener" data-ru="Исходники">Source</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="product" id="flow8">
+          <a class="product__frame" href="https://repentov-dev.github.io/FLOW8/" target="_blank" rel="noopener" data-reveal>
+            <img src="assets/flow8.webp" width="1280" height="640" alt="FLOW8, full control of the Behringer FLOW 8 over Bluetooth, with twelve strips and meters" loading="lazy" decoding="async">
+          </a>
+          <div class="product__meta" data-reveal>
+            <h3><a href="https://repentov-dev.github.io/FLOW8/" target="_blank" rel="noopener">FLOW8</a></h3>
+            <p data-ru="Двенадцать каналов, два слота FX и пятнадцать снапшотов для Behringer FLOW 8 по Bluetooth LE.">Twelve strips, two FX slots and fifteen snapshots for the Behringer FLOW 8, over Bluetooth LE.</p>
+            <p class="product__spec">macOS 14<span>Swift</span><span data-ru="Бесплатно">Free</span></p>
+            <ul class="product__links">
+              <li><a href="https://repentov-dev.github.io/FLOW8/" target="_blank" rel="noopener" data-ru="Открыть сайт">Visit site</a></li>
+              <li><a href="https://github.com/repentov-dev/FLOW8" target="_blank" rel="noopener" data-ru="Исходники">Source</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="product" id="meter">
+          <a class="product__frame" href="https://repentov-dev.github.io/meter-key-bpm/" target="_blank" rel="noopener" data-reveal>
+            <img src="assets/meter.webp" width="1600" height="800" alt="Meter, tempo and key from one drop, showing 128 BPM and A minor beside the file list" loading="lazy" decoding="async">
+          </a>
+          <div class="product__meta" data-reveal>
+            <h3><a href="https://repentov-dev.github.io/meter-key-bpm/" target="_blank" rel="noopener">Meter</a></h3>
+            <p data-ru="Темп и тональность любого файла, считанные на Mac: TempoCNN и KeyCNN.">Tempo and key of any audio file, read on the Mac by TempoCNN and KeyCNN.</p>
+            <p class="product__spec">macOS 13<span>C++</span><span data-ru="На устройстве">On device</span></p>
+            <ul class="product__links">
+              <li><a href="https://repentov-dev.github.io/meter-key-bpm/" target="_blank" rel="noopener" data-ru="Открыть сайт">Visit site</a></li>
+              <li><a href="https://github.com/repentov-dev/meter-key-bpm" target="_blank" rel="noopener" data-ru="Исходники">Source</a></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section built" id="built">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <h2 data-ru="Близко к Mac.">Close to the Mac.</h2>
+          <p data-ru="Нативные окна, живой звук и модели, которые считают на месте.">Native windows, live audio, and models that run right here.</p>
+        </div>
+        <div class="built__grid">
+          <div class="fact" data-reveal><h3>Swift 6</h3><p data-ru="Все три приложения написаны на Swift и C++ с AppKit. Внутри нет браузера.">All three are Swift and C++ on AppKit. No browser inside.</p></div>
+          <div class="fact" data-reveal><h3>Global OSC</h3><p data-ru="RME Control говорит с TotalMix FX 2.1 по сети, в две стороны.">RME Control talks to TotalMix FX 2.1 over the network, both ways.</p></div>
+          <div class="fact" data-reveal><h3>Bluetooth LE</h3><p data-ru="FLOW8 управляет микшером по воздуху, без MIDI и USB.">FLOW8 drives the mixer over the air, with no MIDI or USB.</p></div>
+          <div class="fact" data-reveal><h3 data-ru="На устройстве">On device</h3><p data-ru="Meter считает темп и тональность моделями Essentia, ничего не отправляя.">Meter runs the Essentia models itself and uploads nothing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="wrap" data-reveal>
+        <h2 data-ru="Вопрос по приложению?">A question about an app?</h2>
+        <p class="contact__note" data-ru="Напишите в Telegram.">Message on Telegram.</p>
+        <p><a class="contact__link" href="https://t.me/repentov" target="_blank" rel="noopener">t.me/repentov</a></p>
+        <div class="contact__socials">
+          <a href="index.html" data-ru="Музыка">Music</a>
+          <a href="https://github.com/repentov-dev" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.instagram.com/repentov/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <nav class="foot__nav" aria-label="Footer">
+        <a href="index.html" data-ru="Музыка">Music</a>
+        <a href="portfolio.html" data-ru="Портфолио">Portfolio</a>
+        <a href="index.html#studio" data-ru="Моя студия">My studio</a>
+        <a href="apps.html" data-ru="Приложения">Apps</a>
+        <a href="https://t.me/repentov" target="_blank" rel="noopener">Telegram</a>
+      </nav>
+      <p class="foot__legal" data-ru="RME, TotalMix и FLOW 8 принадлежат их владельцам. Приложения независимы и с ними не связаны.">RME, TotalMix and FLOW 8 are trademarks of their owners. The apps are independent and not affiliated with them.</p>
+      <p class="foot__fine" data-ru="© 2026 Егор Репентов.">© 2026 Egor Repentov.</p>
+    </div>
+  </footer>
+
+  <script src="js/apps.js" defer></script>
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

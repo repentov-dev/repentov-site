@@ -1,0 +1,6 @@
+.DS_Store
+_backups/
+_content.json
+_*.png
+_preview-*.html
+_debug-*.html
