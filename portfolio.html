@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="css/apple.css">
   <script>
     try {
-      if (localStorage.getItem('repentov-lang') === 'ru') {
+      var saved = localStorage.getItem('repentov-lang');
+      var device = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+      if (saved === 'ru' || (saved !== 'en' && /^ru\b/i.test(device))) {
         document.documentElement.lang = 'ru';
         document.documentElement.dataset.lang = 'ru';
       }

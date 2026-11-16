@@ -188,5 +188,10 @@
 
   var stored = null;
   try { stored = localStorage.getItem('repentov-lang'); } catch (e) {}
-  if (stored === 'ru') setLang('ru');
+  if (stored === 'ru' || stored === 'en') {
+    setLang(stored);
+  } else {
+    var device = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+    if (/^ru\b/i.test(device)) setLang('ru');
+  }
 })();
